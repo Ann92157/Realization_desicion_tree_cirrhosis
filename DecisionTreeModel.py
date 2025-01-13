@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-class Node:
+class Node():
     def __init__(self, feature=None, threshold=None, left=None, right=None, info_gain = None, val_class=None):
         self.feature = feature
         self.threshold = threshold
