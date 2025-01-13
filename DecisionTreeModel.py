@@ -100,5 +100,5 @@ class Desicion_tree():
              feature_name = features[node.feature]
              print(indent + f"Признак:'{feature_name}' <= {node.threshold}")
              self.print_tree(node.left, features, indent + "  ")
-             print(indent + f"Признак '{feature_name}' > {node.threshold}")
+             print(indent + f"Признак: '{feature_name}' > {node.threshold}")
              self.print_tree(node.right, features, indent + "  ")
