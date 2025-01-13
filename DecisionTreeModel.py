@@ -92,3 +92,13 @@ class Desicion_tree():
             return self.make_prediction(x, tree.left)
         else:
             return self.make_prediction(x, tree.right)
+            
+    def print_tree(self, node, features, indent=""):
+         if node.val_class is not None:
+             print(indent + f"Класс: {node.val_class}")
+         else:
+             feature_name = features[node.feature]
+             print(indent + f"Признак:'{feature_name}' <= {node.threshold}")
+             self.print_tree(node.left, features, indent + "  ")
+             print(indent + f"Признак '{feature_name}' > {node.threshold}")
+             self.print_tree(node.right, features, indent + "  ")
